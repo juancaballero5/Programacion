@@ -1,3 +1,5 @@
+package Tema04;
+
 public class Ejercicio4Ejemplo {
     public static void main(String[] args) {
         int dia;

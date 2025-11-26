@@ -1,3 +1,5 @@
+package Tema04;
+
 public class Ejercicioedad{
 
     public static void main(String[] args) {

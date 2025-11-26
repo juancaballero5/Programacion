@@ -1,3 +1,5 @@
+package Tema04;
+
 import java.util.Scanner;
 
 public class SatisfaccionB {

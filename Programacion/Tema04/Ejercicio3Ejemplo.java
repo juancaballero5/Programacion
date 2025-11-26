@@ -1,3 +1,5 @@
+package Tema04;
+
 public class Ejercicio3Ejemplo {
     public static void main(String[] args) {
         double numero;

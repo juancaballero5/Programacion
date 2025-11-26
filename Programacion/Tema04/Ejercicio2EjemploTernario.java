@@ -1,3 +1,5 @@
+package Tema04;
+
 public class Ejercicio2EjemploTernario {
     public static void main(String[] args) {
 

@@ -1,3 +1,5 @@
+package Tema04;
+
 public class Ejerciciomeses {
     public static void main(String[] args) {
         int mes;

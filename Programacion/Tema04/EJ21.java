@@ -1,6 +1,6 @@
 package Tema04;
 
-public class Ej21 {
+public class EJ21 {
     public static void main(String[] args) {
         Double base;
         int IVA = 0;

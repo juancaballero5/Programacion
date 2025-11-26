@@ -1,3 +1,5 @@
+package Tema04;
+
 public class Ejercicio2ejemplo {
     public static void main(String[] args) {
         int nota;
