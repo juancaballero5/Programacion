@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EJ43b {
      public static void main(String[] args) {
         
-        static final String SECUENCIA_COLOR = "\033[%dm";
+        //static final String SECUENCIA_COLOR = "\033[%dm";
         final String BORRAR = "\u001b[2J\u001b[H";
         final int MINIMO = 3 ;
 
@@ -50,6 +50,8 @@ public class EJ43b {
         }
         catch (Exception excepcion) {
             System.out.println("**ERROR: la aplicación ha fallado.");
+        } finally {
+            entrada.close();
         }
 
     

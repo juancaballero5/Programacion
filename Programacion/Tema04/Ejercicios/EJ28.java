@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class EJ28 {
@@ -11,7 +12,7 @@ public class EJ28 {
         int descuento;
         Scanner escaner;
 
-        escaner = new Scanner(System.in);
+        escaner = new Scanner(System.in).useLocale(Locale.ENGLISH);
 
         try {
         System.out.print("Introduzca el nombre del articulo: ");

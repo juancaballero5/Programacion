@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EJ60 {
     public static void main(String[] args) {
         
-        final String BORAR = "\u001b[2J\u001b[H";
+        final String BORRAR = "\u001b[2J\u001b[H";
 
         long numero;
 
@@ -16,7 +16,6 @@ public class EJ60 {
             System.out.print("Introduzca un número: ");
             numero = escaner.nextLong();
 
-            
 
         } catch (Exception e) {
             System.out.println("**Error Algo ha salido mal");
