@@ -5,7 +5,7 @@ public class EJ19 {
         float media;
 
         String resultado;
- 
+
         System.out.print("Nota del primer examen: ");
         notaPrimerExamen = Float.parseFloat(System.console().readLine());
 
