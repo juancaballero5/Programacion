@@ -8,15 +8,17 @@ public class JuegoMazmorra {
         
         //Inicializamos las variables
 
-        int vidaJugador = 40;
+        int vidaJugador = 50;
         int vidaEnemigo = 40;
-        int vidaJefe = 120;
-        int AtaqueJugador = 15;
+        int vidaJefe = 110;
+        int ataqueJugador = 15;
         int defensa = 5;
         int oro = 20;
         int pociones = 1;
         int opcion = 0;
+        int eleccion = 0;
         int mazmorra;
+        int oroEncontrado;
 
         String enter;
 
@@ -25,13 +27,15 @@ public class JuegoMazmorra {
         try {
             
             //Mostramos la introducción del juego
-
             mostrarIntroduccion();
 
-            
+            Thread.sleep(2000);
+
+            System.out.println(BORRAR);
+
             //Hacemos el bucle para los turnos
             
-            for (int turno = 0; (turno < 10) || (vidaJugador != 0) || (opcion == 5) ; turno++) {
+            for (int turno = 0; (turno <= 10) || (vidaJugador != 0) || (opcion == 5) ; turno++) {
                 
                 System.out.println(BORRAR);
                 
@@ -47,7 +51,7 @@ public class JuegoMazmorra {
 
                     if (turno == 3 || turno == 5) {
 
-                        mazmorra = 1;
+                        mazmorra = 0;
 
                     } else {
 
@@ -59,20 +63,64 @@ public class JuegoMazmorra {
                     switch (mazmorra) {
                         // Caso de combate
                         case 0:
+
+                            System.out.println("¡HAS ENTRADO EN COMBATE!");
+                            mostrarCombate();
+                            System.out.println("Seleccione la opción que quiera (1-2):");
+                            eleccion = escaner.nextInt();
+
+                            switch (eleccion) {
+                                case 1:
+
+                                    int critico = (int) (Math.random() * 2);
+                                    
+                                    if (critico == 1) {
+                                        ataqueJugador = 30;
+                                    } else 
                             
-                            break;
+                                    System.out.printf("Has infligido %d de daño, el enemigo tiene %d",ataqueJugador,vidaEnemigo);
+
+                                    vidaEnemigo = vidaEnemigo - ataqueJugador;
+
+                                    int ataqueEnemigo = (int) (Math.random() * (15 - 5 + 1)) + 5;
+
+                                    System.out.printf("Has recibido %d de daño , ",ataqueEnemigo);
+
+                                break;
+                            
+                                case 2:
+                                    
+                                break;
+                            
+                                default:
+                                    System.out.println("Debe de introducir un valor del 1 a 5 ");
+                                    turno--;
+                                break;
+                            }
+                            
+                        break;
                         // Caso de encontrar oro
                         case 1:
-                            
-                            break;
+
+                            oroEncontrado = (int) ((Math.random() * (15 - 5 + 1 )) + 5); 
+
+                            System.out.printf("Has encontrado %d de oro \n",oroEncontrado);
+
+                            oro += oroEncontrado;
+                        break;
                         // Caso de encontrar una poción
                         case 2:
                             
-                            break;
+                            System.out.println("Has encontrado una poción");
+                            pociones++;
+
+                        break;
                         // Caso de que no pase nada
                         case 3:
                             
-                            break;
+                            System.out.println("No ha pasado nada");
+
+                        break;
                     }
                         break;
                 
@@ -93,8 +141,8 @@ public class JuegoMazmorra {
                             
                             vidaJugador += 30;
 
-                            if (vidaJugador > 100) {
-                                vidaJugador = 100;
+                            if (vidaJugador > 50) {
+                                vidaJugador = 50;
                             }
 
                             pociones--;
@@ -204,6 +252,16 @@ public class JuegoMazmorra {
         System.out.println("1. Comprar poción 10 \u1FA99                 ");
         System.out.println("2. Mejorar ataque (+5) por 20 de oro. ");
         System.out.println("3. Salir                              ");
+
+    }
+
+
+    public static void mostrarCombate() {
+        
+        System.out.println("                 COMBATE               ");
+        System.out.println("=======================================");
+        System.out.println("1. Luchar                              ");
+        System.out.println("2. Defenderte                          ");
 
     }
 }
