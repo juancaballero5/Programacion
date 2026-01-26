@@ -35,184 +35,288 @@ public class JuegoMazmorra {
 
             //Hacemos el bucle para los turnos
             
-            for (int turno = 0; (turno <= 10) || (vidaJugador != 0) || (opcion == 5) ; turno++) {
+            for (int turno = 0; (turno < 10) || (vidaJugador != 0) || (opcion == 5) ; turno++) {
                 
                 System.out.println(BORRAR);
                 
-                //Mostramos menu principal
-                mostrarMenu();
-                System.out.print("Introducza su opción (1-5): ");
-                opcion = escaner.nextInt();
+                    //Mostramos menu principal
+                    mostrarMenu();
+                    System.out.print("Introducza su opción (1-5): ");
+                    opcion = escaner.nextInt();
 
-                System.out.println(BORRAR);
+                    System.out.println(BORRAR);
 
-                switch (opcion) {
-                    case 1:
-
-                    if (turno == 3 || turno == 5) {
-
-                        mazmorra = 0;
-
-                    } else {
-
-                        mazmorra = (int) Math.random() * 4 ;
-
-                    }
-
-
-                    switch (mazmorra) {
-                        // Caso de combate
-                        case 0:
-
-                            System.out.println("¡HAS ENTRADO EN COMBATE!");
-                            mostrarCombate();
-                            System.out.println("Seleccione la opción que quiera (1-2):");
-                            eleccion = escaner.nextInt();
-
-                            switch (eleccion) {
-                                case 1:
-
-                                    int critico = (int) (Math.random() * 2);
-                                    
-                                    if (critico == 1) {
-                                        ataqueJugador = 30;
-                                    } else 
-                            
-                                    System.out.printf("Has infligido %d de daño, el enemigo tiene %d",ataqueJugador,vidaEnemigo);
-
-                                    vidaEnemigo = vidaEnemigo - ataqueJugador;
-
-                                    int ataqueEnemigo = (int) (Math.random() * (15 - 5 + 1)) + 5;
-
-                                    System.out.printf("Has recibido %d de daño , ",ataqueEnemigo);
-
-                                break;
-                            
-                                case 2:
-                                    
-                                break;
-                            
-                                default:
-                                    System.out.println("Debe de introducir un valor del 1 a 5 ");
-                                    turno--;
-                                break;
-                            }
-                            
-                        break;
-                        // Caso de encontrar oro
+                    switch (opcion) {
+                        // Caso de explorar la mazmorra
                         case 1:
 
-                            oroEncontrado = (int) ((Math.random() * (15 - 5 + 1 )) + 5); 
+                            if (turno == 3 || turno == 5) {
 
-                            System.out.printf("Has encontrado %d de oro \n",oroEncontrado);
+                                mazmorra = 0;
 
-                            oro += oroEncontrado;
-                        break;
-                        // Caso de encontrar una poción
-                        case 2:
-                            
-                            System.out.println("Has encontrado una poción");
-                            pociones++;
+                            } else if (turno == 10) {
 
-                        break;
-                        // Caso de que no pase nada
-                        case 3:
-                            
-                            System.out.println("No ha pasado nada");
+                                mazmorra = 4;
 
-                        break;
-                    }
-                        break;
-                
-                    case 2:
-                        
-                        break;
-                
-                    case 3:
-                        escaner.nextLine();
-                        //Mostramos interfaz de Poción
-                        if (pociones > 0) {
-                            
-                            System.out.println("*******************************");
-                            System.out.println("*                             *");  
-                            System.out.println("*        TE HAS CURADO        *");
-                            System.out.println("*                             *");
-                            System.out.println("*******************************");
-                            
-                            vidaJugador += 30;
+                            } else {
 
-                            if (vidaJugador > 50) {
-                                vidaJugador = 50;
+                            mazmorra = (int) Math.random() * 4 ;
+
                             }
 
-                            pociones--;
-                        } else {
-                            
-                            System.out.println("*******************************");
-                            System.out.println("*                             *");  
-                            System.out.println("*      NO TIENES POCIONES     *");
-                            System.out.println("*                             *");
-                            System.out.println("*******************************");
 
-                        }
+                            switch (mazmorra) {
+                                // Caso de combate
+                                case 0:
+                                    System.out.println("¡HAS ENTRADO EN COMBATE!");
 
-                        System.out.println("Presione ENTER para pasar a lo siguiente:");
-                        enter = escaner.nextLine();
-                        
-                        // Restamos para que no cuente turno
-                        turno--; 
+                                    while ((vidaJugador != 0) || (vidaEnemigo != 0) ) {
+                                    
+                                        mostrarCombate();
+                                        System.out.println("Seleccione la opción que quiera (1-2):");
+                                        eleccion = escaner.nextInt();
+                                    
+                                        int ataqueEnemigo = (int) (Math.random() * (15 - 5 + 1)) + 5;
+                                    
+                                        switch (eleccion) {
+                                            case 1:
+                                            
+                                                int critico = (int) (Math.random() * 5);
+                                            
+                                                // Probabilidad de hacer un ataque critico
+                                                if (critico == 1) {
+                                                    ataqueJugador = 30;
+                                                } else {
+                                                    ataqueJugador = 15;
+                                                }
+                                                    
+                                                vidaEnemigo = vidaEnemigo - ataqueJugador;
 
-                        break;
-                
-                    case 4:
+                                                if (vidaEnemigo < 0) {
+                                                    
+                                                    vidaEnemigo = 0;
 
-                        // Mostramos el menu de la tienda
-                        mostrarTienda();
-                        System.out.println("Seleccione la opción que quiera (1-3):");
-                        opcion = escaner.nextInt();
+                                                    System.out.println("¡HAS DERROTADO AL ENEMIGO, ENHOARABUENA!");
 
-                        switch (opcion) {
-                            case 1:
-                                if (oro>=10) {
+                                                } else {
 
-                                    System.out.println("HAS OBTENIDO UNA POCIÓN");
+                                                    
+                                                    System.out.printf("Has infligido %d de daño, el enemigo tiene %d \n",ataqueJugador,vidaEnemigo);
+                                                    
+                                                    vidaJugador = vidaJugador - ataqueEnemigo;
+                                                    
+                                                    System.out.printf("Has recibido %d de daño , te queda %d de vida \n",ataqueEnemigo, vidaJugador);
+                                                    
+                                                }
 
+                                                System.out.println(BORRAR);
+
+                                            break;
+                                        
+                                            // Caso de defender el ataque
+                                            case 2:
+                                                int dañoDefendido = (int) (Math.random() * (10 - 2 + 1) + 2 );
+                                                    
+                                                ataqueEnemigo = ataqueEnemigo - dañoDefendido;
+                                                    
+                                                vidaJugador = vidaJugador - ataqueEnemigo;
+
+                                                System.out.printf("Has recibido %d de daño , te queda %d de vida \n",ataqueEnemigo, vidaJugador);
+
+                                                System.out.println(BORRAR);
+                                            break;
+                                                
+                                            default:
+                                                System.out.println("Debe de introducir un valor del 1 a 5 ");
+                                                System.out.println(BORRAR);
+                                            break;
+
+                                        }
+                                    }
+                                break;
+
+                                // Caso de encontrar oro
+                                case 1:
+
+                                    oroEncontrado = (int) ((Math.random() * (15 - 5 + 1 )) + 5); 
+
+                                    System.out.printf("Has encontrado %d de oro \n",oroEncontrado);
+
+                                    oro += oroEncontrado;
+                                break;
+
+                                // Caso de encontrar una poción
+                                case 2:
+                                    
+                                    System.out.println("Has encontrado una poción");
                                     pociones++;
-                                } else {
-                                    System.out.println("No tiene oro suficiente");
-                                }
+
                                 break;
-                        
-                            case 2:
-                                if (oro>=20) {
-                                    AtaqueJugador+=5;
-                                } else {
-                                    System.out.println("No tiene suficiente oro");
-                                }
+
+                                // Caso de que no pase nada
+                                case 3:
+                                    
+                                    System.out.println("No ha pasado nada");
+
                                 break;
-                        
-                            case 3:
+
+                                //Batalla contra el jefe final
+                                case 4:
+
+                                    System.out.println("¡Estas frente a la puerta de salida , pero a aparecido el JEFE DE LA MAZMORRA, DERROTALO!!");
+
+                                    while ((vidaJugador != 0) || (vidaJefe != 0) ) {
+                                    
+                                        mostrarCombate();
+                                        System.out.println("Seleccione la opción que quiera (1-2):");
+                                        eleccion = escaner.nextInt();
+                                    
+                                        int ataqueEnemigo = (int) (Math.random() * (15 - 5 + 1)) + 5;
+                                    
+                                        switch (eleccion) {
+                                            case 1:
+                                            
+                                                int critico = (int) (Math.random() * 5);
+                                            
+                                                // Probabilidad de hacer un ataque critico
+                                                if (critico == 1) {
+                                                    ataqueJugador = 30;
+                                                } else {
+                                                    ataqueJugador = 15;
+                                                }
+                                                    
+                                                vidaEnemigo = vidaJefe - ataqueJugador;
+
+                                                if (vidaJefe < 0) {
+                                                    
+                                                    vidaJefe = 0;
+
+                                                    System.out.println("¡HAS DERROTADO AL JEFE FINAL, YA PUEDES ESCAPAR DE LA MAZMORRA!");
+
+                                                } else {
+
+                                                    
+                                                    System.out.printf("Has infligido %d de daño, el enemigo tiene %d \n",ataqueJugador,vidaJefe);
+                                                    
+                                                    vidaJugador = vidaJugador - ataqueEnemigo;
+                                                    
+                                                    System.out.printf("Has recibido %d de daño , te queda %d de vida \n",ataqueEnemigo, vidaJugador);
+                                                    
+                                                }
+
+                                                System.out.println(BORRAR);
+
+                                            break;
+                                        
+                                            // Caso de defender el ataque
+                                            case 2:
+                                                int dañoDefendido = (int) (Math.random() * (10 - 2 + 1) + 2 );
+                                                    
+                                                ataqueEnemigo = ataqueEnemigo - dañoDefendido;
+                                                    
+                                                vidaJugador = vidaJugador - ataqueEnemigo;
+
+                                                System.out.printf("Has recibido %d de daño , te queda %d de vida \n",ataqueEnemigo, vidaJugador);
+
+                                                System.out.println(BORRAR);
+                                            break;
+                                                
+                                            default:
+                                                System.out.println("Debe de introducir un valor del 1 a 5 ");
+                                                System.out.println(BORRAR);
+                                            break;
+
+                                        }
+                                    
+                                    }
+                            }
+                        break;
+
+                        case 2:
+                            mostrarEstado(vidaJugador,ataqueJugador,defensa,oro,pociones);
+                            break;
+                    
+                        case 3:
+                            escaner.nextLine();
+                            //Mostramos interfaz de Poción
+                            if (pociones > 0) {
                                 
-                                break;
-                        
-                            default:
-                                System.out.println("Introduzca un valor del 1 al 3");
-                                break;
-                        }
+                                System.out.println("*******************************");
+                                System.out.println("*                             *");  
+                                System.out.println("*        TE HAS CURADO        *");
+                                System.out.println("*                             *");
+                                System.out.println("*******************************");
+                                
+                                vidaJugador += 30;
 
-                        turno--;
-                        break;
-                
-                    case 5:
-                        
-                        break;
-                
-                    default:
-                        System.out.println("Debe de introducir un valor del 1 a 5 ");
+                                if (vidaJugador > 50) {
+                                    vidaJugador = 50;
+                                }
 
-                        turno--;
-                        break;
-                }
+                                pociones--;
+                            } else {
+                                
+                                System.out.println("*******************************");
+                                System.out.println("*                             *");  
+                                System.out.println("*      NO TIENES POCIONES     *");
+                                System.out.println("*                             *");
+                                System.out.println("*******************************");
+
+                            }
+
+                            System.out.println("Presione ENTER para pasar a lo siguiente:");
+                            enter = escaner.nextLine();
+                            
+                            // Restamos para que no cuente turno
+                            turno--; 
+
+                            break;
+                    
+                        case 4:
+
+                            // Mostramos el menu de la tienda
+                            mostrarTienda();
+                            System.out.println("Seleccione la opción que quiera (1-3):");
+                            opcion = escaner.nextInt();
+
+                            switch (opcion) {
+                                case 1:
+                                    if (oro>=10) {
+
+                                        System.out.println("HAS OBTENIDO UNA POCIÓN");
+
+                                        pociones++;
+                                    } else {
+                                        System.out.println("No tiene oro suficiente");
+                                    }
+                                    break;
+                            
+                                case 2:
+                                    if (oro>=20) {
+                                        ataqueJugador+=5;
+                                    } else {
+                                        System.out.println("No tiene suficiente oro");
+                                    }
+                                    break;
+                            
+                                case 3:
+                                    
+                                    break;
+                            
+                                default:
+                                    System.out.println("Introduzca un valor del 1 al 3");
+                                    break;
+                            }
+
+                            turno--;
+                            break;
+                    
+                        default:
+                            System.out.println("Debe de introducir un valor del 1 a 5 ");
+
+                            turno--;
+                            break;
+                    }
 
             }
 
@@ -263,5 +367,22 @@ public class JuegoMazmorra {
         System.out.println("1. Luchar                              ");
         System.out.println("2. Defenderte                          ");
 
+    }
+
+
+    public static void mostrarEstado(int vidaJugador, int ataqueJugador, int oro, int defensa, int pociones) {
+        
+        System.out.println("                 ESTADO               ");
+        System.out.println("======================================");
+        System.out.println(" VIDA:                             ");
+        System.out.printf(" %d                             \n",vidaJugador);
+        System.out.println(" ATAQUE:                           ");
+        System.out.printf(" %d                             \n",ataqueJugador);
+        System.out.println(" DEFENSA:                          ");
+        System.out.printf(" %d                             \n",defensa);
+        System.out.println(" ORO:                              ");
+        System.out.printf(" %d                             \n",oro);
+        System.out.println(" POCIONES:                         ");
+        System.out.printf(" %d                             \n",pociones);
     }
 }

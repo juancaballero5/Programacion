@@ -11,5 +11,7 @@ public class Practica3 {
         System.out.printf("Nombre : %s\n",nombre);
         System.out.printf("Direccion : %s\n",direccion);
         System.out.printf("Telefono : %s\n",telefono);
+
+        System.out.println("hola buenos dias");
     }
 }
