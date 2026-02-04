@@ -28,6 +28,7 @@ public class EJ29 {
             fila = (int) posicion.charAt(1) - 48;
 
             System.out.println("El alfil se puede mover a las siguientes posiciones:");
+            posiciones(fila, columna);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -37,9 +38,69 @@ public class EJ29 {
 
     }
 
-    public static int posiciones(int[][] tabla) {
+    public static void posiciones(int fila, int columna) {
+        posicioneArribaDer(fila, columna);
+        posicioneArribaIzq(fila, columna);
+        posicioneAbajoDer(fila, columna);
+        posicioneAbajoIzq(fila, columna);
+    }
 
+    public static void posicioneArribaDer(int fila, int columna) {
+
+        int fil = fila + 1;
+        int colu = columna + 1;
+
+        while (fil >= 0 && fil <= FIlS && colu >= 0 && colu <= COlS) {
         
+            System.out.printf("%c%c ",colu + 97, fil + 48);
 
+            fil++;
+            colu++;
+        }   
+
+    }
+
+    public static void posicioneArribaIzq(int fila, int columna) {
+
+        int fil = fila - 1;
+        int colu = columna + 1;
+
+        while (fil >= 0 && fil <= FIlS && colu >= 0 && colu <= COlS) {
+        
+            System.out.printf("%c%c ",colu + 97, fil + 48);
+
+            fil--;
+            colu++;
+        }
+
+    }
+
+    public static void posicioneAbajoIzq(int fila, int columna) {
+
+        int fil = fila - 1;
+        int colu = columna - 1;
+
+        while (fil >= 0 && fil <= FIlS && colu >= 0 && colu <= COlS) {
+        
+            System.out.printf("%c%c ",colu + 97, fil + 48);
+
+            fil--;
+            colu--;
+        }
+
+    }
+
+    public static void posicioneAbajoDer(int fila, int columna) {
+
+        int fil = fila - 1;
+        int colu = columna + 1;
+
+        while (fil >= 0 && fil <= FIlS && colu >= 0 && colu <= COlS) {
+        
+            System.out.printf("%c%c ",colu + 97, fil + 48);
+
+            fil++;
+            colu++;
+        }
     }
 }
