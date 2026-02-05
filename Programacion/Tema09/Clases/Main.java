@@ -1,4 +1,4 @@
-package Cases;
+package Clases;
 public class Main {
     public static void main(String[] args) {
         
@@ -15,7 +15,7 @@ public class Main {
 
         System.out.println(garfield.getNombre());
         garfield.come("lasaña");
-        
+
         garfield.peleaCon(silvestre);
         garfield.peleaCon(pluto);
 

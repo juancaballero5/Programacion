@@ -1,4 +1,4 @@
-package Cases;
+package Clases;
 
 /**
  * La clase GATO extiende las caracteristicas y comportamientos
@@ -17,11 +17,11 @@ public class Gato extends Animal {
     }
 
     
-    void maulla(){
+    public void maulla(){
         System.out.println("Miiiaaau");
     }
 
-    void ronronea(){
+    public void ronronea(){
         System.out.println("Brrrrrrr");
     }
 

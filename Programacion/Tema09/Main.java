@@ -1,4 +1,7 @@
-package Cases;
+import Clases.Gato;
+import Clases.Perro;
+import Clases.Sexo;
+
 public class Main {
     public static void main(String[] args) {
         
@@ -15,7 +18,7 @@ public class Main {
 
         System.out.println(garfield.getNombre());
         garfield.come("lasaña");
-        garfield.pelea(silvestre);
+        garfield.peleaCon(silvestre);
 
         garfield.setEdad(15);
         garfield.setSexo(Sexo.MACHO);

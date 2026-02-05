@@ -1,4 +1,4 @@
-package Cases;
+package Clases;
 
 public abstract class Animal {
     
@@ -50,7 +50,7 @@ public abstract class Animal {
         System.out.println("Ñam");
     }
 
-    void peleaCon(Animal gato){
+    public void peleaCon(Animal gato){
         System.out.println("Voy a pelearme con " + gato.nombre   + "!!");
     }
 
