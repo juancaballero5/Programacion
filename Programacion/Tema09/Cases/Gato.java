@@ -1,31 +1,22 @@
 package Cases;
 
-public class Gato {
-    private String nombre;
-    private String raza;
-    private int edad;
+/**
+ * La clase GATO extiende las caracteristicas y comportamientos
+ * de la clase ANIMAL. Independientemente, define sus propios 
+ * atributos y métodos.
+ */
+public class Gato extends Animal {
 
     // métodos (comportamientos)
-    Gato(String nombre) {
-        this.nombre = nombre;
+    public Gato(String nombre) {
+        super(nombre);
     }
 
-    /**
-     * Getter de la propiedad NOMBRE
-     * @return
-     */
-    public String getNombre(){
-        return this.nombre;
+    public Gato(String nombre,int edad) {
+        super(nombre,edad);
     }
 
-    /**
-     * Setter de la propiedad EDAD
-     * @param edad
-     */
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
+    
     void maulla(){
         System.out.println("Miiiaaau");
     }
@@ -34,17 +25,8 @@ public class Gato {
         System.out.println("Brrrrrrr");
     }
 
-    void cumple(int anios){
-        this.edad+=anios;
-    }
-
-    /**
-     * @param comida
-     */
-    void come(String comida){
-        System.out.println("Me gusta comer "+ comida + "!!!");
-        System.out.println("Ñam");
-    }
+    
+    
 
     void pelea(Gato gato){
         System.out.println("Voy a pelearme con " + gato.nombre   + "!!");
