@@ -2,7 +2,6 @@ package Clases;
 
 public abstract class Animal {
     
-    
     protected String nombre;
     private String raza;
     private int edad;
