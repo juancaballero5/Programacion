@@ -25,10 +25,4 @@ public class Gato extends Animal {
         System.out.println("Brrrrrrr");
     }
 
-    
-    
-
-    void pelea(Gato gato){
-        System.out.println("Voy a pelearme con " + gato.nombre   + "!!");
-    }
 }

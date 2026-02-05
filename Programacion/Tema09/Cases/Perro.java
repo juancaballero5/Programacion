@@ -35,4 +35,15 @@ public class Perro extends Animal {
         }
     }
 
+    /**
+     * El método existe en la clase Object, de la que heredan
+     * todas las clases. Cómo vamos a redefinir su comportamiento en 
+     * la clase Perro, decimos que estamos SOBRECARGANDO el metodo
+     */
+    @Override
+    public String toString() {
+        return this.getNombre() + "\n" +
+                this.getEdad() + "\n";
+    }
+
 }

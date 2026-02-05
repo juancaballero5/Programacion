@@ -15,9 +15,12 @@ public class Main {
 
         System.out.println(garfield.getNombre());
         garfield.come("lasaña");
-        garfield.pelea(silvestre);
+        
+        garfield.peleaCon(silvestre);
+        garfield.peleaCon(pluto);
 
         garfield.setEdad(15);
         garfield.setSexo(Sexo.MACHO);
+
     }
 }

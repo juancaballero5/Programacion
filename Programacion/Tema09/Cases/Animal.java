@@ -22,6 +22,10 @@ public abstract class Animal {
         return this.nombre;
     }
 
+    public int getEdad(){
+        return this.edad;
+    }
+
     /**
      * Setter de la propiedad EDAD
      * @param edad
@@ -44,6 +48,10 @@ public abstract class Animal {
     public void come(String comida){
         System.out.println("Me gusta comer "+ comida + "!!!");
         System.out.println("Ñam");
+    }
+
+    void peleaCon(Animal gato){
+        System.out.println("Voy a pelearme con " + gato.nombre   + "!!");
     }
 
 }
