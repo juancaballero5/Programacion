@@ -53,7 +53,7 @@ public class NumerosDigitales {
 
                 inferior = true;
 
-                break;
+            break;
             case 1:
                 superior = false;     
 
@@ -69,7 +69,7 @@ public class NumerosDigitales {
 
                 inferior = false;
 
-                break;
+            break;
             case 2:
                 superior = true;     
 
@@ -85,7 +85,7 @@ public class NumerosDigitales {
 
                 inferior = true;
                 
-                break;
+            break;
             case 3:
                 superior = true;     
 
@@ -101,7 +101,7 @@ public class NumerosDigitales {
 
                 inferior = true;
                 
-                break;
+            break;
             case 4:
                 superior = false;     
 
@@ -117,7 +117,7 @@ public class NumerosDigitales {
 
                 inferior = false;
                 
-                break;
+            break;
             case 5:
                 superior = true;     
 
@@ -133,7 +133,7 @@ public class NumerosDigitales {
 
                 inferior = true;
                 
-                break;
+            break;
             case 6:
                 superior = true;     
 
@@ -149,7 +149,7 @@ public class NumerosDigitales {
 
                 inferior = true;
                 
-                break;
+            break;
             case 7:
                 superior = true;     
 
@@ -165,7 +165,7 @@ public class NumerosDigitales {
 
                 inferior = false;
                 
-             break;
+            break;
             case 8:
                 superior = true;     
 
@@ -219,7 +219,7 @@ public class NumerosDigitales {
                 }
 
                 if (superiorIzquierda = true && (i==2 ||i ==3)) {
-                    System.out.printf("%s",(j==1)?"*":(superiorDerecha = false && j==5)?"":(j==5)?"":" ");
+                    System.out.printf("%s",(j==1)?"*":(superiorDerecha = true && j==5)?"":(j==5)?"":" ");
                 }
 
                 if (superiorDerecha = true && (i==2 || i==3)) {
@@ -236,7 +236,7 @@ public class NumerosDigitales {
                 }
 
                 if ((inferiorIzquierda = true) && (i==5 || i==6)) {
-                    System.out.printf("%s",(j==1)?"*":(inferiorDerecha = false && j==5)?"":(j==5)?"":" ");
+                    System.out.printf("%s",(j==1)?"*":(inferiorDerecha = true && j==5)?"":(j==5)?"":" ");
                 }
 
                 if (inferiorDerecha = true && (i==5 || i==6)) {
@@ -244,6 +244,12 @@ public class NumerosDigitales {
                         System.out.printf("%s",(j<5)?" ":"");
                     }
                     System.out.printf("%s",(j==5)?"*":"");
+                }
+
+                if ((inferior = true) && (i==7)) {
+                    System.out.printf("%s",(j==1|| j==5)?" ":"*");
+                } else if (inferior==false) {
+                    System.out.print(" ");
                 }
             }
 
