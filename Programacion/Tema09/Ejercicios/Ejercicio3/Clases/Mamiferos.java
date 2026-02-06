@@ -6,10 +6,6 @@ public class Mamiferos extends Animal {
         super(nombre);
     }
 
-    public void nose(){
-        System.out.println("Toma mi patita");
-    }
-    
     public void pecho() {
         System.out.println("Toma pecho, hazte grande.");
     }

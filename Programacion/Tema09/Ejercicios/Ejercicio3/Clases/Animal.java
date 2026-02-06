@@ -22,10 +22,6 @@ public class Animal {
         return this.edad;
     }
 
-    /**
-     * Setter de la propiedad EDAD
-     * @param edad
-     */
     public void setEdad(int edad) {
         this.edad = edad;
     }

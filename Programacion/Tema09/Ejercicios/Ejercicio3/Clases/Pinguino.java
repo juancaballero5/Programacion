@@ -1,11 +1,15 @@
 package Ejercicios.Ejercicio3.Clases;
 
-public class Pinguino {
+public class Pinguino extends Ave {
     
-    public void presentacion(){
+    public Pinguino(String nombre) {
+            super(nombre);
+        }
+    
+        public void presentacion(){
         System.out.println("Soy un pingüino programador, estoy programando en Java.");
     }
 
-    
+
 
 }
