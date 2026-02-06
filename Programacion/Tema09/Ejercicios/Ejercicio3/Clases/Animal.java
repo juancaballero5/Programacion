@@ -4,7 +4,7 @@ import Clases.Sexo;
 
 public class Animal {
     
-    private String nombre;
+    protected String nombre;
     private String comida;
     private boolean crias;
     private int edad;
@@ -57,7 +57,4 @@ public class Animal {
         }
     }
 
-    public void tomarSol(){
-        System.out.println("Estoy tomando el sol");
-    }
 }

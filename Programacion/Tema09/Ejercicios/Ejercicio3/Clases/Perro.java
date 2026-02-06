@@ -1,7 +1,11 @@
 package Ejercicios.Ejercicio3.Clases;
 
-public class Perro {
+public class Perro extends Mamiferos {
     
+    public Perro (String nombre) {
+        super(nombre);
+    }
+
     public void ladra() {
         System.out.println("Guauu!!");
     }

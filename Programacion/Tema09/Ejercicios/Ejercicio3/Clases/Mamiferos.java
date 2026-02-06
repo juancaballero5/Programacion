@@ -10,4 +10,7 @@ public class Mamiferos extends Animal {
         System.out.println("Toma mi patita");
     }
     
+    public void pecho() {
+        System.out.println("Toma pecho, hazte grande.");
+    }
 }
