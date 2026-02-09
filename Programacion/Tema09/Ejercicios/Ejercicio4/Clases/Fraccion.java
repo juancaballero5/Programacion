@@ -22,10 +22,36 @@ public class Fraccion {
 
     public Fraccion simplificar(Fraccion frac) {
 
+        boolean fin = true;
+
+        
         do {
-            this.enumerador%5 == 0
-        } while (condition);
-        return new Fraccion(this.enumerador * frac.enumerador, this.denominador * frac.denominador);
+            if ((frac.enumerador%2 == 0) && (frac.denominador%2 == 0)) {
+
+                frac.enumerador /= 2;
+                frac.denominador /= 2;
+
+            } else if ((frac.enumerador%3 == 0) && (frac.denominador%3 == 0)) {
+
+                frac.enumerador /= 3;
+                frac.denominador /= 3;
+
+            } else if ((frac.enumerador%5 == 0) && (frac.denominador%5 == 0)) {
+
+                frac.enumerador /= 5;
+                frac.denominador /= 5;
+
+            } else if ((frac.enumerador%7 == 0) && (frac.denominador%7 == 0)) {
+
+                frac.enumerador /= 7;
+                frac.denominador /= 7;
+
+            } else {
+                fin = false;
+            }
+        } while (fin);
+
+        return new Fraccion(frac.enumerador, frac.denominador);
     }
 
     public void invertir() {
