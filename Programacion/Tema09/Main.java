@@ -22,5 +22,7 @@ public class Main {
 
         garfield.setEdad(15);
         garfield.setSexo(Sexo.MACHO);
+
+        System.out.println(garfield);
     }
 }
