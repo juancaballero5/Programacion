@@ -1,6 +1,7 @@
-import clases.Diablo;
-import clases.FIFA;
-import clases.Rectangulo;
+package interfaces;
+import interfaces.clases.Diablo;
+import interfaces.clases.FIFA;
+import interfaces.clases.Rectangulo;
 
 public class Main2 {
     public static void main(String[] args) {

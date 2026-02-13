@@ -1,4 +1,4 @@
-package clases;
+package interfaces.clases;
 
 public class Diablo implements Botonera{
     
