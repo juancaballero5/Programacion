@@ -1,4 +1,4 @@
-package Clases;
+package animal.Clases;
 
 public abstract class Animal {
     

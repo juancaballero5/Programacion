@@ -1,6 +1,6 @@
 package Ejercicios.Ejercicio3.Clases;
 
-import Clases.Sexo;
+import animal.Clases.Sexo;
 
 public class Animal {
     

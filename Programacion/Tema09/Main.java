@@ -1,28 +1,15 @@
-import Clases.Gato;
-import Clases.Perro;
-import Clases.Sexo;
+import clases.Diablo;
+import clases.FIFA;
+import clases.Rectangulo;
 
 public class Main {
-    public static void main(String[] args) {
-        
-        Gato garfield = new Gato("Garfield");
-        Gato silvestre = new Gato("Silvestre");
-        Perro pluto = new Perro("Pluto");
+    FIFA fifa = new FIFA();
+    Diablo diablo = new Diablo();
 
-        pluto.setCaza(true);
+    // fifa.pulsarX();
+    // diablo.pulsarX();
 
-        pluto.caza();
+    Rectangulo rectangulo = new Rectangulo(2, 2);
 
-        garfield.maulla();
-        garfield.ronronea();
-
-        System.out.println(garfield.getNombre());
-        garfield.come("lasaña");
-        garfield.peleaCon(silvestre);
-
-        garfield.setEdad(15);
-        garfield.setSexo(Sexo.MACHO);
-
-        System.out.println(garfield);
-    }
+    
 }

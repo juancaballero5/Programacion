@@ -1,11 +1,11 @@
 package Ejercicios.Ejercicio3;
 
-import Clases.Sexo;
 import Ejercicios.Ejercicio3.Clases.Gato;
 import Ejercicios.Ejercicio3.Clases.Canario;
 import Ejercicios.Ejercicio3.Clases.Lagarto;
 import Ejercicios.Ejercicio3.Clases.Perro;
 import Ejercicios.Ejercicio3.Clases.Pinguino;
+import animal.Clases.Sexo;
 
 public class EJ3 {
     public static void main(String[] args) {

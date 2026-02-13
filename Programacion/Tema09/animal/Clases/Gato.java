@@ -1,4 +1,4 @@
-package Clases;
+package animal.Clases;
 
 /**
  * La clase GATO extiende las caracteristicas y comportamientos
