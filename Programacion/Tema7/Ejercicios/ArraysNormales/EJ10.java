@@ -61,7 +61,7 @@ public class EJ10 {
                     break;
     
                     case 2:
-                        contador1 = mesaVacia( mesas);
+                        contador1 = mesaVacia(mesas);
 
                         if (contador1 > 0) {
                             System.out.printf("Por favor, siéntese en la mesa número %d.",contador1);
