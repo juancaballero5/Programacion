@@ -11,7 +11,7 @@ public class Coche extends Vehiculo {
     }
 
     public void anda(int kilometros) {
-        System.out.print("¿Cuantos kilometros quiere recorrer?");
+        System.out.println("¿Cuantos kilometros quiere recorrer?");
         kilometros = entrada.nextInt();
 
         this.kilometrosRecorridos += kilometros;

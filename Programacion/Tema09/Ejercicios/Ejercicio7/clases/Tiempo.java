@@ -1,4 +1,4 @@
-package Ejercicios.Ejercicio7;
+package Ejercicios.Ejercicio7.clases;
 
 public class Tiempo {
     
@@ -17,7 +17,7 @@ public class Tiempo {
     }
 
     public void resta() {
-
+        
     }
 
     @Override

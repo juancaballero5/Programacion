@@ -18,6 +18,7 @@ public class Main {
         
         do {
 
+            System.out.println("");
             menu();
             eleccion = entrada.nextInt();
 
