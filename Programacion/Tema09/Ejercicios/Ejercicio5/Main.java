@@ -58,7 +58,7 @@ public class Main {
                     break;
             }
             
-        } while (eleccion == 8);
+        } while (eleccion != 8);
     }
 
     public static void menu() {
