@@ -15,11 +15,11 @@ public class Zona {
         if (this.entradasPorVender == 0) {
             System.out.println("Lo siento, las entradas para esa zona estan agotadas.");
         } else if (this.entradasPorVender < n) {
-            System.out.println("Sólo que quedan %d" + this.entradasPorVender + "entradas para esa zona.");
+            System.out.println("Sólo me quedan " + this.entradasPorVender + " entradas para esa zona.");
         }
 
         if (this.entradasPorVender >= n) {
-            System.out.println("Aquí tienen sus " + n + "entradas, gracias.");
+            System.out.println("Aquí tienen sus " + n + " entradas, gracias.");
             this.entradasPorVender -= n;
         }
     }
