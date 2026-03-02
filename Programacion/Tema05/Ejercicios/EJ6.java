@@ -6,7 +6,7 @@ public class EJ6 {
         int digitos = 1;
         int numero ;
         int temporal ;
-     
+    
         System.out.println("\033[1mNÚMERO DE DIGITOS DE UN NÚMERO\033[0m");
         System.out.print("Introduce un numero entero: ");
         numero = Integer.parseInt(System.console().readLine());

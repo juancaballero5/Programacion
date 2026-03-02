@@ -27,7 +27,7 @@ public class EJ36 {
                 resultado  = exponente * multiplicador;
 
                 System.out.printf("%d! = %d \n",exponente,resultado);
-              
+            
                 multiplicador = resultado;
                 exponente++;
 
