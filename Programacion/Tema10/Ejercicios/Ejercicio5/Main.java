@@ -87,11 +87,11 @@ public class Main {
             
             
 
-            if (/* == null*/) {
-                System.out.printf("El disco con el codigo %s no se ha encontrado", codigo);
-            } else {
-                System.out.println();
-            }
+            // if (/* == null*/) {
+            //     System.out.printf("El disco con el codigo %s no se ha encontrado", codigo);
+            // } else {
+            //     System.out.println();
+            // }
         }
     }
 

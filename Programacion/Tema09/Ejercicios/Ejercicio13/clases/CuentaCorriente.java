@@ -2,17 +2,17 @@ package Ejercicios.Ejercicio13.clases;
 
 public class CuentaCorriente {
     
-    private int numeroCuenta;
+    private long numeroCuenta;
     private double saldo;
 
     public CuentaCorriente() {
         this.saldo = 0;
-        this.numeroCuenta = (int) (Math.random() * (99999 - 10000 + 1)) + 10000;
+        this.numeroCuenta = (long) (Math.random() * (9999999999L - 1000000000 + 1)) + 1000000000;
     }
 
     public CuentaCorriente(double n) {
         this.saldo = n;
-        this.numeroCuenta = (int) (Math.random() * (99999 - 10000 + 1)) + 10000;
+        this.numeroCuenta = (long) (Math.random() * (9999999999L - 1000000000 + 1)) + 1000000000;
     }
 
     public void ingreso(double n) {
