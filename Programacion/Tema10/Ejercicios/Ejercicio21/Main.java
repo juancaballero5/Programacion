@@ -17,6 +17,7 @@ public class Main {
         cuenta1.tranferencia(cuenta3, 250);
         cuenta3.tranferencia(cuenta1, 22);
         
+        cuenta1.mostrarMovimientos();
 
     }
 }
