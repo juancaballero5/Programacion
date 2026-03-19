@@ -28,6 +28,7 @@ public class Main {
 
         System.out.println("");
 
+        // Ordenamos las palabras
         Collections.sort(palabras);
 
         // Palabras en orden alfabetico
