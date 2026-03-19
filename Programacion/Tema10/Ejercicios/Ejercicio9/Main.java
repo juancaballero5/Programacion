@@ -11,6 +11,7 @@ public class Main {
         
         Carta carta;
         ArrayList<Carta> baraja = new ArrayList<>();
+        ArrayList<Carta> barajaOrdenada = new ArrayList<>();
 
         carta = new Carta();
         baraja.add(carta);
@@ -27,11 +28,27 @@ public class Main {
             
         }
 
-        // mostramos todas las cartas
-        for(Carta item : baraja) {
-            System.out.println(item);
+        // // mostramos todas las cartas
+        // for(Carta item : baraja) {
+        //     System.out.println(item);
+        // }
+
+        if (carta.compareTo(carta) > 0) {
+            barajaOrdenada.add(carta);
         }
 
+        if (carta.compareTo(carta) == 0) {
+            barajaOrdenada.add(carta);
+        } 
+
+        if (carta.compareTo(carta) < 0) {
+            barajaOrdenada.add(carta);
+        } 
+
+        // mostramos todas las cartas
+        for(Carta item : barajaOrdenada) {
+            System.out.println(item);
+        }
 
     }
 }

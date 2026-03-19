@@ -1,6 +1,6 @@
 package Ejercicios.Ejercicio9.clases;
 
-public class Carta {
+public class Carta implements Comparable<Carta> {
     private final String FIGURA[] = {"As", "2", "3", "4", "5", "6", "7", "Sota", "Caballo", "Rey"};
     private final String PALOS[] = {"Oros", "Bastos", "Espadas", "Copas"};
 
@@ -23,6 +23,8 @@ public class Carta {
         return palo;
     }
 
+
+
     /**
      * 
      */
@@ -41,6 +43,11 @@ public class Carta {
 
         return (this.figura.equals( b.figura)) && (this.palo.equals(b.palo)) ;
 
+    }
+
+    @Override
+    public int compareTo(Carta o) {
+        return this.palo.compareTo(o.palo);
     }
 
 }
