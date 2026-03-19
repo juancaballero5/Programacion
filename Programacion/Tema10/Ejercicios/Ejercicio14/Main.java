@@ -27,7 +27,7 @@ public class Main {
             System.out.print("Producto (Introduzca fin para terminar la compra):");
             producto = System.console().readLine().toLowerCase();
 
-            if (!productos.containsKey(producto) && producto!= "fin" ) {
+            if (!productos.containsKey(producto) && !producto.equals("fin")) {
                 System.out.println("Lo sentimos, este producto no esta disponible.");
             } else {
 
@@ -46,10 +46,10 @@ public class Main {
             }
 
 
-        } while (producto != "fin");
+        } while (!producto.equals("fin"));
 
         if (cantidadProductos > 0) {
-            
+            recibo(productosEscogidos,cantidades,cantidadProductos);
         }
 
     }
@@ -59,7 +59,7 @@ public class Main {
      * @param cantidades
      * @param cantidadProductos
      */
-    public void recibo(HashMap<String,Float> productosEscogidos ,ArrayList <Integer> cantidades, int cantidadProductos) {
+    public static void recibo(HashMap<String,Float> productosEscogidos ,ArrayList <Integer> cantidades, int cantidadProductos) {
 
         Object[] productos;
         Object[] precios;
