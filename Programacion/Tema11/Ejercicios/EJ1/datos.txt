@@ -1,0 +1,6 @@
+Hola, este es un archivo de prueba.
+Estamos aprendiendo a leer archivos en Java.
+Cada línea representa un dato diferente.
+Puedes añadir más líneas para probar el programa.
+La lectura de archivos es fundamental en programación.
+¡Sigue practicando y mejorando tus habilidades!
