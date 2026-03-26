@@ -1,0 +1,58 @@
+Desarrollar un minijuego RPG llamado "Demonio" donde se va a simular torneos. El jugador entroduce su 
+nombre por consola al ejecutar el programa, y éste lee un archivo con los monstruos rivales, que desordenará 
+para hacerlos enfrentarse al héroe de la aventura simulando los combates. Todo el registro de batallas se irá
+guardando en un nuevo archivo.
+
+¿Cómo se invoca el programa?
+java Demonio <archivo_entrada>.txt <nombre_heroe> <archivo_salida>.txt
+
+Si no hay exactamente 3 parámetros el programa emitira un error junto con la ayuda se detendrá.
+Vamos a utilizas POO, ficheros y línea de comandos.
+
+¿Qué estructura tendrá el archivo de bestias?
+<nombre_enemigo>,<vidaMaxima>,<ataqueMaximo>
+
+EJ:
+Slime,20,5
+Goblin,35,8
+Lobo Rabioso,40,10
+Esqueleto,50,12
+Orco,65,15
+Troll de las Cavernas,85,20
+Minotauro,100,25
+
+¿Cómo funciona el programa?
+Si los argumentos son correctos: 
+1. Se carga el contenido del archivo de enemigos a una colección apropiada.
+[INFO] Cargando 3 monstruos del bestiario...
+
+2. Se mostrará un mensaje de inicio de batalla
+[INFO] ¡Comienza el torneo para Heroe (Vida:100 Ataque:15)!
+
+3. A continuación, la aplicación irá enfrentandose en batallas por ronda a cada enemigo con el héroe.
+--- Ronda 1 ---
+Heroe se enfrenta a Goblin.
+Heroe ataca a Goblin y le quita 15 de vida. Goblin se queda a 5.
+Goblin ataca a Heroe y le quita 5 de vida. Heroe se queda a 95.
+Heroe ataca a Goblin y le quita 15 de vida. ¡Goblin ha muerto!
+
+REGLAS DE COMBATE 
+1. El Heroe siempre ataca primero.
+2. El daño infligido por el Héroe oscilará entre 1 y el ataqueMaximo(ambos incluidos).
+3. Ataca el enemigo
+4. El daño dinfligido por el enemigo oscile entre 0 y el ataqueMaximo(ambos incluidos).
+5. Evaluar la vida tanto del héroe como del enemigo.
+    a. Si el héroe está muerto, se acab el juego.
+    b. Si el héroe está vivo y el enemigo tambien, repetimos todo lo anterior.
+    c. Si el héroe está vivo y el enemigo muerto, gana el heroe y pasamos a 
+    la siguiente ronda donde atacamos al siguiente monstruo.
+
+6. Se registra toda la evolución de la ronda en el archivo de salida.
+
+HACER EN CASA:
+1. Crea una clase llamada Personaje con atributos nombre, vida y ataque.
+2. Crear métodos:
+    a. estaVivo: devuelve si el enemigo aún tiene puntos de vida o no;
+    b. atacar: que recibe un Personaje (enemigo).
+    Este método encapsula la lógica de ataque explicada anteriormente. 
+    DEJAD EL CUERPO DEL MÉTODO VACÍO.
