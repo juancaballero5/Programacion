@@ -9,7 +9,6 @@ public class Ejercicio3 {
     public static void main(String[] args) {
 
         String nombre ;
-        String archivoCopiar ;
         String linea = "" ;
 
         try {
