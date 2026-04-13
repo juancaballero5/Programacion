@@ -9,9 +9,9 @@ argumento TEXT
 
 CREATE TABLE libro (
     codLib INT AUTO_INCREMENT PRIMARY KEY,
-    ISBN CHARTR(13) NOT NULL UNIQUE,
+    ISBN CHAR(13) NOT NULL UNIQUE,
     titulo VARCHAR(255) NOT NULL UNIQUE,
     autor VARCHAR(255) DEFAULT 'anonimo',
-    paginas SMALINT NOT NULL CHECK(paginas > 0),
+    paginas SMALLINT NOT NULL CHECK(paginas > 0),
     argumento TEXT
 );
