@@ -1,0 +1,25 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: prog_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: ejemplo    # Nombre de la base de datos
+      MYSQL_ROOT_PASSWORD: root  # Trabajaremos de momento con root
+      MYSQL_USER: juan
+      MYSQL_PASSWORD: clave
+    ports:
+      - "3306:3306"   # Puerto equipo:puerto contenedor
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: prog_phpmyadmin
+    restart: always # Reinicia siempre el servicio
+    environment:
+      PMA_HOST: db  #nombre del serviciode base de datos
+      MYSQL_ROOT_PASSWORD: root
+      PMA_PORT: 3306
+    ports:
+      -"8080:80" # Puerto equipo: puerto contenedor (en un servicio phpmyadmin)
+    depends_on:
+      - db
