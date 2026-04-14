@@ -5,7 +5,7 @@ public class Ejercicio2ejemplo {
         int nota;
 
         System.out.print("Introduzca la nota del examen :");
-         
+        
         nota = Integer.parseInt(System.console().readLine());
 
         if (nota >= 0 && nota <= 10) {

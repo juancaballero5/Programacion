@@ -40,7 +40,7 @@ public class Ejercicio9 {
             }
 
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("*ERROR, Algo ha salido mal" + e.getMessage());
         }
     }
 }
