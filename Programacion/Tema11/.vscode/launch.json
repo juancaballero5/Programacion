@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Ejercicio8",
+            "request": "launch",
+            "mainClass": "Ejercicios.EJ8.Ejercicio8",
+            "projectName": "Tema11_dae86269"
+        },
+        {
+            "type": "java",
             "name": "Rango",
             "request": "launch",
             "mainClass": "Ejercicios.EJ13.Rango",
