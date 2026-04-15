@@ -32,7 +32,7 @@ public class EJ10 {
                 if (f2.exists()) {
                     
                     System.out.println("El fichero de copia que ha introducido ya tiene contenido, ¿Desea sobreescribir? (Si/No):");
-                    respuesta = System.console().readLine();
+                    respuesta = System.console().readLine().toLowerCase();
 
                     if (respuesta.toLowerCase().charAt(0) == 's') {
                         
@@ -41,9 +41,11 @@ public class EJ10 {
 
                         while ((linea = br.readLine()) != null) {
                             if (!linea.trim().isEmpty()) {       
-                                bw.write(linea);
+                                bw.write(linea + "\n");
                             }
                         }
+
+                        System.out.println("La copia ha sido correctamente realizada.");
 
                         bw.close();
                         br.close();
