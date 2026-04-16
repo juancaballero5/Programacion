@@ -4,7 +4,7 @@ public class Formateador {
     public static void main(String[] args) {
         
         String flag;
-        String texto = ;
+        String texto;
 
         if (args.length <= 0) {
 
