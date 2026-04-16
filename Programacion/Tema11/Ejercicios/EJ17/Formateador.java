@@ -4,9 +4,9 @@ public class Formateador {
     public static void main(String[] args) {
         
         String flag;
-        String texto;
+        String texto = ;
 
-        if (args.length < 0) {
+        if (args.length <= 0) {
 
             System.out.println("ERROR: debe introducir al menos un argumento por linea de comando.");
             System.out.println("Uso: java Formateador <\"texto\">.");
