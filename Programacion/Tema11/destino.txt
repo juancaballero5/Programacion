@@ -1,4 +1,3 @@
-
 Hola, este es un archivo de prueba.
 Estamos aprendiendo a leer archivos en Java.
 Cada línea representa un dato diferente.

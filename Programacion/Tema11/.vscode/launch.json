@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Buscador",
+            "request": "launch",
+            "mainClass": "Ejercicios.EJ18.Buscador",
+            "projectName": "Tema11_dae86269"
+        },
+        {
+            "type": "java",
             "name": "SumaInfinita",
             "request": "launch",
             "mainClass": "Ejercicios.EJ12.SumaInfinita",
