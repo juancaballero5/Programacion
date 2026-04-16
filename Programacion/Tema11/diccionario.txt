@@ -1,0 +1,20 @@
+Casa — House
+Perro — Dog
+Gato — Cat
+Agua — Water
+Comida — Food
+Libro — Book
+Mesa — Table
+Silla — Chair
+Coche — Car
+Ciudad — City
+Escuela — School
+Trabajo — Work / Job
+Amigo — Friend
+Familia — Family
+Tiempo — Time / Weather
+Día — Day
+Noche — Night
+Sol — Sun
+Luna — Moon
+Mar — Sea
