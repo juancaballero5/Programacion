@@ -1,17 +1,2 @@
-crear tabla Libro
-
-CodLib AUTOINCREMENTAL Clave primaria
-ISBN Chat(13)
-titulo VARCHAR(255)
-autor VARCHAR(255)
-paginas SMALLINT
-argumento TEXT
-
-CREATE TABLE libro (
-    codLib INT AUTO_INCREMENT PRIMARY KEY,
-    ISBN CHAR(13) NOT NULL UNIQUE,
-    titulo VARCHAR(255) NOT NULL UNIQUE,
-    autor VARCHAR(255) DEFAULT 'anonimo',
-    paginas SMALLINT NOT NULL CHECK(paginas > 0),
-    argumento TEXT
-);
+SELECT 
+FROM libro

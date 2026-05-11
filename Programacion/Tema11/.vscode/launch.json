@@ -6,6 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Diccionario",
+            "request": "launch",
+            "mainClass": "Ejercicios.EJ19.Diccionario",
+            "projectName": "Tema11_2c84655f",
+            "args": [
+                "diccionario.txt"
+            ]
+        },
+        {
+            "type": "java",
             "name": "Buscador",
             "request": "launch",
             "mainClass": "Ejercicios.EJ18.Buscador",
