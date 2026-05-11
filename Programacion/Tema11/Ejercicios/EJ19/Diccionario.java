@@ -1,5 +1,6 @@
 package Ejercicios.EJ19;
 
+import java.io.BufferedReader;
 import java.io.File;
 
 public class Diccionario {
@@ -11,7 +12,7 @@ public class Diccionario {
             
             fichero = args[0];
 
-            
+            BufferedReader 
 
         } else {
             System.out.println("ERROR: debe introducirse solo un argumento con el nombre del fichero.");
