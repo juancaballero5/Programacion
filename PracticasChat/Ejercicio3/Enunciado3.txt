@@ -1,0 +1,3 @@
+Ejercicio 3 — Datos personales y casting
+Pide edad (int), sueldo (double) y un carácter de categoría (A, B o C). Muestra: la edad en meses, el sueldo anual (×12),
+la categoría en minúscula usando casting de char. Demuestra al menos un casting explícito (int a double o al revés).

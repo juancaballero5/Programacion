@@ -1,0 +1,4 @@
+Ejercicio 1 — Calculadora de IMC
+Pide al usuario su nombre, peso (double, en kg) y altura (double, en metros). Calcula el IMC (peso / altura²)
+ y muestra un mensaje con el nombre y si el IMC indica: bajo peso (<18.5), normal (18.5–24.9), sobrepeso 
+ (25–29.9) u obesidad (≥30).
