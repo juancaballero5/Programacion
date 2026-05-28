@@ -26,6 +26,8 @@ public class EJ3 {
             System.out.printf("Sueldo anual: %.2f\n",(sueldo*12));
             System.out.printf("Edad en meses: %s\n",categoria);
 
+            sc.close();
+
         } catch (Exception e) {
             System.out.println("**ERROR: El programa ha fallado.");
         }

@@ -34,6 +34,8 @@ public class EJ {
             } else {
                 System.out.printf("%s estas obeso",nombre);
             }
+
+            sc.close();
             
         } catch (InputMismatchException e) {
             System.out.println("Introduzca el peso o la altura con decimales (Ejemplo: 0,0)");
