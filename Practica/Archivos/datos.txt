@@ -1,0 +1,3 @@
+Hola, este es un archivo de prueba.
+Estamos aprendiendo a escribir archivos en Java.
+Cada linea representa un dato diferente.

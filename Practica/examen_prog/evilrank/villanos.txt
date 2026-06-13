@@ -1,0 +1,30 @@
+Norman Osborn;Duende Verde;Tecnología avanzada;85
+Otto Octavius;Doctor Octopus;Tentáculos mecánicos;78
+Selina Kyle;Catwoman;Agilidad y sigilo;65
+Edward Nygma;Enigma;Inteligencia y acertijos;72
+Harvey Dent;Dos Caras;Dualidad y azar;70
+Victor Fries;Mr. Freeze;Criogenia;68
+Pamela Isley;Hiedra Venenosa;Control de plantas;74
+Joker;Guasón;Caos e imprevisibilidad;95
+Lex Luthor;Lex Luthor;Genio estratégico;88
+Thanos;Thanos;Fuerza cósmica;98
+Loki Laufeyson;Loki;Ilusiones y trucos;82
+Ultron;Ultron;Inteligencia artificial;90
+Hela Odinsdottir;Hela;Dominio de la muerte;92
+Max Eisenhardt;Magneto;Control magnético;87
+Raven Darkholme;Mística;Metamorfosis;76
+Darth Vader;Darth Vader;Fuerza oscura;94
+Sheev Palpatine;Darth Sidious;Rayos Sith;96
+Boba Fett;Boba Fett;Cazarrecompensas;73
+General Grievous;Grievous;Combate con sables;80
+Sauron;Sauron;Poder del Anillo;97
+Saruman el Blanco;Saruman;Hechicería y orcos;84
+Gollum;Gollum;Sigilo y obsesión;55
+Lord Voldemort;Voldemort;Magia oscura;99
+Bellatrix Lestrange;Bellatrix;Sadismo mágico;89
+Ursula;Úrsula;Magia marina;79
+Scar;Scar;Intriga y astucia;66
+Cruella de Vil;Cruella;Obsesión y crueldad;69
+Zoltan Krell;Sombra de Ceniza;Portales dimensionales;77
+Mira Vex;Reina de Espejos;Ilusiones reflectantes;81
+Tobias Grim;El Coleccionista;Robo de habilidades ajenas;83

@@ -1,0 +1,3 @@
+Ejercicio 1 — Estadísticas de notas
+Pide 10 notas (double) por teclado y almacénalas en un array. Calcula y muestra: la media, 
+la nota máxima, la nota mínima y cuántos alumnos han aprobado (nota ≥ 5).

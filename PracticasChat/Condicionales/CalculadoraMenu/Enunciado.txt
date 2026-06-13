@@ -1,0 +1,3 @@
+Ejercicio 1 — Calculadora con menú
+Pide dos números y una operación (+, -, *, /). Usa switch para realizar la operación. Controla la división entre cero mostrando 
+un mensaje de error.

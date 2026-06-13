@@ -1,0 +1,3 @@
+Ejercicio 3 — Serie de Fibonacci
+Pide al usuario cuántos términos de la serie de Fibonacci quiere ver y muéstralos.
+La serie comienza: 0, 1, 1, 2, 3, 5, 8…
