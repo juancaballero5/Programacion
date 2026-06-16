@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-import Villano;
-import Mision;
+import clases.Mision;
+import clases.Villano;
 
 public class EvilRank {
 
@@ -205,6 +205,8 @@ public class EvilRank {
                                             
                                         }
 
+                                        bw.close();
+
                                     } else {
                                         BufferedWriter bw = new BufferedWriter(new FileWriter("resumen_misiones.txt"));
                                         ArrayList<Villano> participantes = new ArrayList<>();
@@ -224,6 +226,8 @@ public class EvilRank {
                                             bw.write("Media de maldad:" + item.calcularMediaMaldad()+ "\n");
                                             
                                         }
+
+                                        bw.close();
                                         
                                     }
                                     
@@ -241,6 +245,7 @@ public class EvilRank {
                             }
                         }
                         sc.close();
+                        br.close();
 
                 } catch (FileNotFoundException e) {
                     System.out.println("**ERROR: El archivo no ha sido encontrado ser leido.");
