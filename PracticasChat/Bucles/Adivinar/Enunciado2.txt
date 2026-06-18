@@ -1,4 +1,0 @@
-Ejercicio 2 — Adivina el número
-El programa elige un número entre 1 y 100. El usuario debe adivinarlo. Por cada intento 
-incorrecto, indica si el número secreto es mayor o menor. Cuenta los intentos y muéstralos 
-al final. Usa un bucle do-while.

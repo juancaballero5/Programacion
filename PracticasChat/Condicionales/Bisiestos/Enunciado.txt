@@ -1,3 +1,0 @@
-Ejercicio 3 — Año bisiesto
-Pide un año y determina si es bisiesto. Un año es bisiesto si es divisible entre 4, excepto los múltiplos de 100, 
-que solo son bisiestos si también son múltiplos de 400.

@@ -1,0 +1,6 @@
+P001;Tornillos;500;0.05
+P002;Tuercas;300;0.03
+P003;Arandelas;150;0.02
+P004;Clavos;abc;0.04
+P005;Tacos;220;0.10
+P006;Bisagras;80;1.25

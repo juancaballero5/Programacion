@@ -1,4 +1,0 @@
-Ejercicio 2 — Clasificador de triángulos
-Pide los tres lados de un triángulo. Primero comprueba si forman un triángulo válido (la suma de dos lados debe ser 
-mayor que el tercero). Si es válido, clasifícalo: equilátero (3 iguales), isósceles (2 iguales) o escaleno 
-(todos distintos).

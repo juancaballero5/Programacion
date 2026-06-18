@@ -1,2 +1,0 @@
-Ejercicio 1 — Tablas de multiplicar
-Muestra las tablas del 1 al 10 usando bucles anidados. El formato de cada línea debe ser: 3 x 4 = 12.
